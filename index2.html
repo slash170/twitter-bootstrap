@@ -8,12 +8,11 @@
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    <!-- Lesson #12 -->
+    <!-- Lesson #12 -#13 -->
     <div class="container">
-      <h3>Lesson #12</h3>
-      <div class="span6">
+      <h3>Lesson #12 - #13</h3>
 
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar">
 	  <div class="navbar-inner">
 	    <div class="container">
 	    <a href="" class="brand">Dotinstall</a>
@@ -21,14 +20,103 @@
 	      <li class="active"><a href="">Home</a></li>
 	      <li><a href="">Help</a></li>
 	    </ul>
+	    <form class="navbar-search pull-left">
+	      <input type="text" class="search-query" placeholder="検索">
+	    </form>
+	    <ul class="nav pull-right">
+	      <li class="dropdown">
+		<a href="" class="dropdown-toggle" data-toggle="dropdown">
+		  @hogehoge
+		  <span class="caret"></span>
+		</a>
+		<ul class="dropdown-menu">
+		  <li><a href="">Settings</a></li>
+		  <li><a href="">Logout</a></li>
+		</ul>
+	      </li>
+	    </ul>
 	    </div>
 	  </div>
 	</div>
 	
-      </div>
     </div>
 
+    <!-- Lesson #14 -->
+    <div class="container">
+      <h3>Lesson #14</h3>
 
+      <ul class="breadcrumb">
+	<li><a href="">Home</a> <span class="divider">/</span></li>
+	<li><a href="">Lessons</a> <span class="divider">/</span></li>
+	<li class="active">PHP</li>
+      </ul>
+
+      <div class="pagination">
+	<ul>
+	  <li class="disabled"><a href="">Prev</a></li>
+	  <li class="active"><a href="">1</a></li>
+	  <li><a href="">2</a></li>
+	  <li><a href="">Next</a></li>
+	</ul>
+      </div>
+      
+    </div>
+
+    <!-- Lesson #15 -->
+    <div class="container">
+      <h3>Lesson #15</h3>
+
+      <div class="alert alert-error fade in">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+	Message ....
+      </div>
+      
+      <p><span class="label label-info">NOTE</span> Message... <span class="badge badge-important">5</span></p>
+      
+    </div>
+
+    <!-- Lesson #16 -->
+    <div class="container">
+      <h3>Lesson #16</h3>
+
+      <div class="span4">
+	<div class="progress progress-striped active progress-success">
+	  <div class="bar" style="width:60%"></div>
+	</div>
+      </div>
+      
+    </div>
+
+    <!-- Lesson #17 -->
+    <div class="container">
+      <h3>Lesson #17</h3>
+
+      <a href="#myModal" class="btn" data-toggle="modal">Modal Window</a>
+
+      <div id="myModal" class="modal hide fade">
+	<div class="modal-header">
+	  <a href="#" class="close" data-dismiss="modal">&times;</a>
+	  <h3>My Modal</h3>
+	</div>
+	<div class="modal-body">
+	  message...
+	</div>
+	<div class="modal-footer">
+	  <a href="#" class="btn">OK</a>
+	</div>
+      </div>
+      
+    </div>
+
+    <!-- Lesson #18 -->
+    <div class="container">
+      <h3>Lesson #18</h3>
+
+      <p>this is a <a href="#" rel="tooltip" data-original-title="補足情報">tooltip</a>.</p>
+      <p>this is a <a href="#" rel="popover" data-original-title="補足情報" data-content="もっと詳しい内容">popover</a>.</p>
+      
+    </div>
+    
     <!-- Footer -->
     <div class="container">
       <h3>Footer</h3>
@@ -36,5 +124,11 @@
 
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script>
+      $(function() {
+        $('a[rel=tooltip]').tooltip({'placement': 'right'});
+        $('a[rel=popover]').popover({'placement': 'right'});
+      });
+    </script>
   </body>
 </html>
